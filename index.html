@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jun — AI Engineer</title>
+  <meta name="description" content="AI backend engineer. Hermes Agent official memory provider. Python, FastAPI, Docker, LLM." />
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #141416;
+      --border: #1f1f23;
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --accent: #22d3ee;
+      --accent-dim: #0891b2;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 48px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: rgba(34, 211, 238, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+    }
+
+    /* Section */
+    section { padding: 48px 0; }
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* Project cards */
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+    .project:hover { border-color: #2a2a2e; }
+    .project h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .project .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0;
+    }
+    .project .stack span {
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .project p { color: var(--muted); font-size: 0.95rem; }
+    .project .links { margin-top: 12px; }
+    .project .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-right: 16px;
+    }
+    .project .links a:hover { text-decoration: underline; }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skills span {
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* Status bar */
+    .status-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .status-bar .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .status-bar .status-text { font-size: 0.95rem; font-weight: 500; }
+    .status-bar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .status-bar a:hover { text-decoration: underline; }
+
+    /* Contact */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .contact-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .contact-links a:hover { color: var(--text); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero { padding: 48px 0 32px; }
+      section { padding: 32px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Jun <span>Jiang</span></h1>
+      <p class="tagline">
+        AI backend engineer. Building the infrastructure layer for intelligent agents — memory, tools, and automation.
+      </p>
+      <span class="badge">✦ Available for work</span>
+    </div>
+
+    <!-- Status -->
+    <section>
+      <div class="status-bar">
+        <div>
+          <span class="dot"></span>
+          <span class="status-text">Open to freelance &amp; full-time</span>
+        </div>
+        <a href="#contact">Get in touch →</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>recall-sqlite</h3>
+        <p>Tiered memory provider for Hermes Agent with automatic forgetting. Three-path RRF retrieval (ANN + keywords + FTS5) in pure SQLite. Zero LLM at query time. Official Hermes Agent memory provider — PR merged by Nous Research.</p>
+        <div class="stack">
+          <span>Python</span><span>SQLite</span><span>Rust</span><span>LLM</span>
+        </div>
+        <div class="links">
+          <a href="https://github.com/Jnocode/recall-memory" target="_blank">GitHub →</a>
+          <a href="https://pypi.org/project/recall-sqlite/" target="_blank">PyPI →</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>代碼縫隙 Podcast</h3>
+        <p>Fully AI-powered Mandarin tech podcast. End-to-end automated pipeline: script generation → SoulX TTS → ffmpeg editing → multi-platform publishing. 92% reduction in manual production time.</p>
+        <div class="stack">
+          <span>Python</span><span>ComfyUI</span><span>SoulX TTS</span><span>ffmpeg</span>
+        </div>
+        <div class="links">
+          <a href="https://podcasts.apple.com/podcast/id..." target="_blank">Listen →</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Self-hosted Infrastructure</h3>
+        <p>Full-stack personal infrastructure on Synology NAS: FastAPI backend, PostgreSQL, Meilisearch full-text search, VitePress wiki, Docker Compose orchestration. Publicly accessible via DDNS + reverse proxy.</p>
+        <div class="stack">
+          <span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>Meilisearch</span><span>NAS</span>
+        </div>
+        <div class="links">
+          <a href="https://jno-worldline.myds.me:8443/" target="_blank">Live →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>Docker</span>
+        <span>SQLite</span>
+        <span>PostgreSQL</span>
+        <span>LLM / AI Agents</span>
+        <span>LangChain</span>
+        <span>RAG</span>
+        <span>Redis</span>
+        <span>Git</span>
+        <span>CI/CD</span>
+        <span>Linux</span>
+        <span>Rust</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="https://github.com/Jnocode" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jun-jno-jiang" target="_blank">LinkedIn</a>
+        <a href="https://www.cakeresume.com/..." target="_blank">CakeResume</a>
+        <a href="https://jno-worldline.myds.me:8443/" target="_blank">Wiki</a>
+      </div>
+    </section>
+
+    <footer>
+      Jun Jiang &middot; 2026
+    </footer>
+  </div>
+</body>
+</html>
