@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jun Jiang | AI Systems Architect & Agent Automation</title>
   <meta name="description" content="AI Systems Architect & Agent Automation Engineer. Author of recall-sqlite, NousResearch Hermes contributor. Local-first systems, RAG, Multi-Agent pipelines." />
+  <meta property="og:title" content="Jun Jiang | AI Systems Architect & Agent Automation" />
+  <meta property="og:description" content="Author of recall-sqlite · NousResearch Hermes contributor · -92% production latency AI pipelines." />
+  <meta property="og:type" content="website" />
   <style>
     :root {
       --bg: #090a0f;
@@ -240,6 +243,22 @@
     }
     .cross-card strong { color: var(--text); }
 
+    /* Architecture Diagram */
+    .arch-diagram {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 18px 12px;
+    }
+    .arch-diagram svg { width: 100%; height: auto; display: block; }
+    .arch-caption {
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
     /* Contact / Footer */
     .footer {
       text-align: center;
@@ -288,15 +307,15 @@
       <!-- Key Metrics -->
       <div class="metrics">
         <div class="metric-card">
-          <div class="metric-val">PyPI Package</div>
+          <div class="metric-val">PyPI Published</div>
           <div class="metric-lbl">recall-sqlite 核心作者</div>
         </div>
         <div class="metric-card">
-          <div class="metric-val">NousResearch</div>
+          <div class="metric-val">NousResearch Contributor</div>
           <div class="metric-lbl">Hermes Agent 記憶架構貢獻者</div>
         </div>
         <div class="metric-card">
-          <div class="metric-val">-92% 耗時</div>
+          <div class="metric-val">-92% Production Latency</div>
           <div class="metric-lbl">端到端 AI Podcast 自動化產線</div>
         </div>
       </div>
@@ -365,6 +384,82 @@
         <div class="links">
           <a href="https://github.com/Jnocode" target="_blank">GitHub Profile (Private Repo on Request) →</a>
         </div>
+      </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section>
+      <h2 class="section-title"><span>✦</span> 系統架構示意 (Reference Architecture)</h2>
+      <div class="arch-diagram">
+        <svg viewBox="0 0 760 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Multi-Agent 系統參考架構：輸入層、決策控制層、記憶與資料核心、交付治理層，經 A2A 協定總線串接">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+            </marker>
+          </defs>
+
+          <!-- Layer 1: Input -->
+          <rect x="12" y="10" width="736" height="78" rx="12" fill="#0d1017" stroke="#232738"/>
+          <text x="30" y="32" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2">01 · INPUT 輸入層</text>
+          <rect x="32" y="38" width="176" height="38" rx="8" fill="#12141c" stroke="#38bdf8" stroke-opacity="0.45"/>
+          <text x="120" y="62" text-anchor="middle" fill="#e2e8f0" font-size="12.5">Hermes Planner（規劃）</text>
+          <rect x="232" y="38" width="176" height="38" rx="8" fill="#12141c" stroke="#38bdf8" stroke-opacity="0.45"/>
+          <text x="320" y="62" text-anchor="middle" fill="#e2e8f0" font-size="12.5">小克 Maker（實作）</text>
+          <rect x="432" y="38" width="176" height="38" rx="8" fill="#12141c" stroke="#38bdf8" stroke-opacity="0.45"/>
+          <text x="520" y="62" text-anchor="middle" fill="#e2e8f0" font-size="12.5">小衡 Grader（驗收）</text>
+          <rect x="632" y="38" width="96" height="38" rx="8" fill="#12141c" stroke="#232738"/>
+          <text x="680" y="56" text-anchor="middle" fill="#e2e8f0" font-size="12">看板派工</text>
+          <text x="680" y="70" text-anchor="middle" fill="#94a3b8" font-size="9.5">Kanban · Ready</text>
+
+          <!-- Bus -->
+          <rect x="12" y="106" width="736" height="34" rx="8" fill="rgba(56,189,248,0.07)" stroke="#38bdf8" stroke-opacity="0.3"/>
+          <text x="380" y="128" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="600">A2A 協定總線（JSON-RPC：派工 · 進度 · 驗收 Artefacts）</text>
+          <line x1="120" y1="76" x2="120" y2="106" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="320" y1="76" x2="320" y2="106" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <line x1="520" y1="76" x2="520" y2="106" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <!-- Layer 2: Decision -->
+          <rect x="12" y="158" width="736" height="78" rx="12" fill="#0d1017" stroke="#232738"/>
+          <text x="30" y="180" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2">02 · DECISION 決策控制層</text>
+          <rect x="32" y="186" width="176" height="38" rx="8" fill="#12141c" stroke="#818cf8" stroke-opacity="0.5"/>
+          <text x="120" y="210" text-anchor="middle" fill="#e2e8f0" font-size="12.5">LLM 推理引擎</text>
+          <rect x="232" y="186" width="176" height="38" rx="8" fill="#12141c" stroke="#818cf8" stroke-opacity="0.5"/>
+          <text x="320" y="210" text-anchor="middle" fill="#e2e8f0" font-size="12.5">Prompt 蒸餾與管線</text>
+          <rect x="432" y="186" width="176" height="38" rx="8" fill="#12141c" stroke="#818cf8" stroke-opacity="0.5"/>
+          <text x="520" y="210" text-anchor="middle" fill="#e2e8f0" font-size="12.5">Tool Calling 調度</text>
+          <rect x="632" y="186" width="96" height="38" rx="8" fill="#12141c" stroke="#818cf8" stroke-opacity="0.5"/>
+          <text x="680" y="210" text-anchor="middle" fill="#e2e8f0" font-size="12">Guardrails</text>
+          <line x1="380" y1="140" x2="380" y2="158" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <!-- Layer 3: Memory & Data -->
+          <rect x="12" y="254" width="736" height="78" rx="12" fill="#0d1017" stroke="#232738"/>
+          <text x="30" y="276" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2">03 · MEMORY &amp; DATA 記憶與資料核心（Recall-SQLite）</text>
+          <rect x="32" y="282" width="166" height="38" rx="8" fill="#12141c" stroke="#c084fc" stroke-opacity="0.5"/>
+          <text x="115" y="306" text-anchor="middle" fill="#e2e8f0" font-size="12.5">ANN 向量檢索</text>
+          <rect x="218" y="282" width="166" height="38" rx="8" fill="#12141c" stroke="#c084fc" stroke-opacity="0.5"/>
+          <text x="301" y="306" text-anchor="middle" fill="#e2e8f0" font-size="12.5">FTS5 全文檢索</text>
+          <rect x="404" y="282" width="166" height="38" rx="8" fill="#12141c" stroke="#c084fc" stroke-opacity="0.5"/>
+          <text x="487" y="306" text-anchor="middle" fill="#e2e8f0" font-size="12.5">關鍵字權重</text>
+          <rect x="590" y="282" width="138" height="38" rx="8" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-opacity="0.6"/>
+          <text x="659" y="299" text-anchor="middle" fill="#38bdf8" font-size="11.5" font-weight="600">RRF 融合 ➜ 80ms</text>
+          <text x="659" y="314" text-anchor="middle" fill="#94a3b8" font-size="9.5">自動遺忘衰減曲線</text>
+          <line x1="380" y1="236" x2="380" y2="254" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <!-- Layer 4: Delivery -->
+          <rect x="12" y="350" width="736" height="68" rx="12" fill="#0d1017" stroke="#232738"/>
+          <text x="30" y="372" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2">04 · DELIVERY &amp; GOVERNANCE 交付與治理層</text>
+          <rect x="90" y="378" width="184" height="30" rx="15" fill="#12141c" stroke="#4ade80" stroke-opacity="0.4"/>
+          <text x="182" y="397" text-anchor="middle" fill="#e2e8f0" font-size="11.5">自動化產線（Podcast）</text>
+          <rect x="288" y="378" width="184" height="30" rx="15" fill="#12141c" stroke="#4ade80" stroke-opacity="0.4"/>
+          <text x="380" y="397" text-anchor="middle" fill="#e2e8f0" font-size="11.5">量化回測（JoJoTrading）</text>
+          <rect x="486" y="378" width="184" height="30" rx="15" fill="#12141c" stroke="#4ade80" stroke-opacity="0.4"/>
+          <text x="578" y="397" text-anchor="middle" fill="#e2e8f0" font-size="11.5">CI/CD ＋ Read-back 驗證</text>
+          <line x1="380" y1="332" x2="380" y2="350" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+          <!-- Feedback loop -->
+          <path d="M748 384 H 756 V 44 H 748" fill="none" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6" marker-end="url(#arrow)"/>
+        </svg>
+        <p class="arch-caption">▲ 端到端 Multi-Agent 交付架構：看板派工 ➜ A2A 總線 ➜ 決策／記憶雙核 ➜ 自動化交付，驗收結果回饋閉環（虛線）</p>
       </div>
     </section>
 
