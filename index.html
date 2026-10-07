@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jun Jiang | AI Systems Architect &amp; Agent Automation</title>
-  <meta name="description" content="AI Systems Architect &amp; Agent Automation Engineer. Author of recall-sqlite and a NousResearch Hermes memory-provider PR. Local-first retrieval, production automation, and reliable data systems.">
-  <meta property="og:title" content="Jun Jiang | AI Systems Architect &amp; Agent Automation">
-  <meta property="og:description" content="Author of recall-sqlite · NousResearch Hermes contributor · 92% shorter podcast production lead time.">
+  <title>姜鈞｜日月光半導體工程師｜個人 AI Agent 與自動化研究</title>
+  <meta name="description" content="目前任職日月光半導體，擔任工程師。工作之外，持續投入 AI Agent、自動化與開源工具的個人研究與實作。">
+  <meta property="og:title" content="姜鈞｜日月光半導體工程師｜個人 AI Agent 與自動化研究">
+  <meta property="og:description" content="目前任職日月光半導體，擔任工程師。工作之外，持續投入 AI Agent、自動化與開源工具的個人研究與實作。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jnocode.github.io/">
+  <meta property="og:locale" content="zh_TW">
   <style>
     :root {
       --bg: #090a0f;
@@ -71,6 +73,11 @@
       max-width: 620px;
       margin: 0 auto 28px;
     }
+    .personal-note {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0 auto 24px;
+    }
 
     /* Key Metrics Banner */
     .metrics {
@@ -80,6 +87,7 @@
       margin: 24px 0 48px;
     }
     .metric-card {
+      min-width: 0;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -87,6 +95,7 @@
       text-align: center;
     }
     .metric-val {
+      overflow-wrap: anywhere;
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--accent);
@@ -187,6 +196,7 @@
     }
     .project .links {
       display: flex;
+      flex-wrap: wrap;
       gap: 16px;
     }
     .project .links a {
@@ -296,13 +306,13 @@
     <header class="hero">
       <div class="badge">
         <span class="dot"></span>
-        <span>Open for AI Presale &amp; AI Systems Engineering</span>
+        <span>日月光半導體工程師</span>
       </div>
       <h1>姜鈞 (Jun Jiang)</h1>
       <p class="tagline">
-        AI Systems Architect &amp; Agent Automation Specialist.<br>
-        專注於 Multi-Agent 工作流、長期記憶檢索架構與企業級 AI 系統工程化落地。
+        目前任職日月光半導體，擔任工程師。工作之外，持續投入 AI Agent、自動化與開源工具的個人研究與實作。
       </p>
+      <p class="personal-note">本站內容為個人研究與作品，不代表任職公司的立場。</p>
 
       <!-- Key Metrics -->
       <div class="metrics">
@@ -321,9 +331,17 @@
       </div>
     </header>
 
+    <!-- Current Experience -->
+    <section aria-labelledby="current-experience">
+      <h2 class="section-title" id="current-experience"><span>✦</span> 目前工作經歷</h2>
+      <div class="cross-card">
+        <p><strong>2026.10 — 至今｜工程師｜日月光半導體</strong></p>
+      </div>
+    </section>
+
     <!-- Flagship Projects -->
     <section>
-      <h2 class="section-title"><span>✦</span> 核心旗艦專案 (Flagship Projects)</h2>
+      <h2 class="section-title"><span>✦</span> 個人研究與開源作品</h2>
 
       <!-- Project 1 -->
       <div class="project">
@@ -390,7 +408,7 @@
 
     <!-- System Architecture -->
     <section>
-      <h2 class="section-title"><span>✦</span> 系統架構示意 (Reference Architecture)</h2>
+      <h2 class="section-title"><span>✦</span> 個人作品系統架構示意</h2>
       <div class="arch-diagram">
         <svg viewBox="0 0 760 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI 系統作品集參考架構：多源輸入、Python 編排、記憶資料核心與交付治理層">
           <defs>
@@ -466,7 +484,7 @@
 
     <!-- Technical Stack -->
     <section>
-      <h2 class="section-title"><span>✦</span> 專業技能體系 (Technical Stack)</h2>
+      <h2 class="section-title"><span>✦</span> 個人研究與實作技能</h2>
       <div class="skills-grid">
         <div class="skill-block">
           <h3>AI &amp; Agent Architecture</h3>
